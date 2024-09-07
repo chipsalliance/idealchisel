@@ -60,6 +60,16 @@ trait IdeaPlugin extends ScalaModule {
     scalaPlugin() ++ jbJar()
   }
 
+  def release = T {
+    os.makeDir.all(T.dest / "release" / "lib")
+    os.copy.into(
+      mill.util.Jvm.createJar(localRunClasspath().map(_.path).filter(os.exists), mill.api.JarManifest.Empty).path,
+      T.dest / "release" / "lib"
+    )
+    os.proc("zip", "-r", s"$artifactName.zip", "release").call(T.dest)
+    PathRef(T.dest / s"$artifactName.zip")
+  }
+
   // From SBT Plugins
   // API from [[https://github.com/JetBrains/sbt-idea-plugin/blob/master/ideaSupport/src/main/scala/org/jetbrains/sbtidea/Keys.scala]].
   // TODO: clean up
