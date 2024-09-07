@@ -1,0 +1,25 @@
+<idea-plugin>
+  <id>org.chipsalliance.idealchisel</id>
+  <name>Chisel Support</name>
+  <vendor>Tesla Zhang, Jiuyang Liu</vendor>
+
+  <description><![CDATA[
+        The plugin enhances the chisel with features, such as:
+        <ul>
+        <li>D/I macro injection</li>
+        <li>And much more!</li>
+        </ul>
+        <br/>
+        Contribute to the plugin at <a href="https://github.com/chipsalliance/idealchisel">github.com:chipsalliance/chisel</a>
+        ]]></description>
+
+  <idea-version since-build="242" until-build="242.*"/>
+  <depends>org.intellij.scala</depends>
+  <depends>com.intellij.modules.java</depends>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="org.intellij.scala">
+    <syntheticMemberInjector implementation="org.chipsalliance.idealchisel.InstanceInjector"/>
+  </extensions>
+</idea-plugin>
