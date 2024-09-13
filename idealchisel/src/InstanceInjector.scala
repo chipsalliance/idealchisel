@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2024 Jiuyang Liu <liu@jiuyang.me>
 package org.chipsalliance.idealchisel
 
-import org.jetbrains.plugins.scala.lang.psi.api.toplevel.typedef.{ScObject, ScTypeDefinition}
-import org.jetbrains.plugins.scala.lang.psi.impl.toplevel.typedef.SyntheticMembersInjector
+import org.jetbrains.plugins.scala.lang.psi.api.toplevel.typedef._
+import org.jetbrains.plugins.scala.lang.psi.impl.toplevel.typedef._
 
 class InstanceInjector extends SyntheticMembersInjector {
   private val targetObject = "chisel3.experimental.hierarchy"
