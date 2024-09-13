@@ -13,7 +13,7 @@
         Contribute to the plugin at <a href="https://github.com/chipsalliance/idealchisel">github.com:chipsalliance/chisel</a>
         ]]></description>
 
-  <idea-version since-build="242" until-build="242.*"/>
+  <idea-version since-build="242"/>
   <depends>org.intellij.scala</depends>
   <depends>com.intellij.modules.java</depends>
   <depends>com.intellij.modules.platform</depends>
