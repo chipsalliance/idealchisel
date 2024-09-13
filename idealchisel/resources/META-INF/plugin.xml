@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>org.chipsalliance.idealchisel</id>
   <name>Chisel Support</name>
-  <vendor>Tesla Zhang, Jiuyang Liu</vendor>
+  <vendor>Tesla Zhang, Jiuyang Liu, kazutoiris</vendor>
 
   <description><![CDATA[
         The plugin enhances the chisel with features, such as:
